@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A college research project investigating the relationship between students' screen time and sleep quality by Seth Edwards for TECH 3745 01.">
+  <title>The Relationship Between Screen Time and Sleep Quality Among Students</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       HEADER & MINIMAL NAVIGATION
+       Single header with title and hamburger menu button only
+       ========================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="#home" class="header-title" aria-label="Return to top of page">
+        The Relationship Between Screen Time and Sleep Quality Among Students
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       SLEEK NAVIGATION DRAWER / OVERLAY
+       Opens when the menu button in the upper-right corner is clicked
+       ========================================================= -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true">
+    <nav class="nav-drawer" id="navMenu" aria-label="Main Navigation">
+      <div class="drawer-header">
+        <span class="drawer-subtitle">Research Navigation</span>
+        <button class="close-button" id="closeMenu" aria-label="Close navigation menu">&times;</button>
+      </div>
+      <ul class="nav-list">
+        <li><a href="#home" class="nav-link"><span class="nav-num">01</span><span class="nav-text">Home</span></a></li>
+        <li><a href="#problem" class="nav-link"><span class="nav-num">02</span><span class="nav-text">Research Problem</span></a></li>
+        <li><a href="#questions" class="nav-link"><span class="nav-num">03</span><span class="nav-text">Research Questions</span></a></li>
+        <li><a href="#variables" class="nav-link"><span class="nav-num">04</span><span class="nav-text">Variables</span></a></li>
+        <li><a href="#hypotheses" class="nav-link"><span class="nav-num">05</span><span class="nav-text">Hypotheses</span></a></li>
+        <li><a href="#dataset" class="nav-link"><span class="nav-num">06</span><span class="nav-text">Dataset</span></a></li>
+        <li><a href="#analysis" class="nav-link"><span class="nav-num">07</span><span class="nav-text">Analysis</span></a></li>
+        <li><a href="#about" class="nav-link"><span class="nav-num">08</span><span class="nav-text">About</span></a></li>
+      </ul>
+      <div class="drawer-footer">
+        <div class="drawer-student">Seth Edwards</div>
+        <div class="drawer-course">TECH 3745 01</div>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <!-- =========================================================
+         1. HOME (HERO SECTION)
+         ========================================================= -->
+    <section class="section hero-section" id="home">
+      <div class="container hero-content">
+        <div class="academic-badge">Academic Research Project</div>
+        <h1 class="hero-title">The Relationship Between Screen Time and Sleep Quality Among Students</h1>
+        <p class="hero-subtitle">
+          Exploring how daily technology use may relate to sleep duration and sleep quality among students.
+        </p>
+        <div class="hero-meta">
+          <div class="meta-item">
+            <span class="meta-label">Researcher</span>
+            <span class="meta-value">Seth Edwards</span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <span class="meta-label">Course</span>
+            <span class="meta-value">TECH 3745 01</span>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a href="#problem" class="btn btn-primary">
+            <span>Explore the Research</span>
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 3.33334V12.6667M8 12.6667L12.6667 8M8 12.6667L3.33333 8" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         2. RESEARCH PROBLEM
+         ========================================================= -->
+    <section class="section" id="problem">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Context &amp; Significance</span>
+          <h2 class="section-title">Research Problem</h2>
+        </div>
+
+        <div class="card card-narrative">
+          <p class="lead-text">
+            Smartphones, computers, tablets, televisions, and gaming systems have become major parts of students’ everyday lives.
+          </p>
+          <p class="body-text">
+            Across modern university campuses, digital displays are involved in virtually every daily routine. Students continuously interact with screens for diverse academic, vocational, and personal activities:
+          </p>
+
+          <div class="use-cases-grid">
+            <div class="use-case-item">
+              <span class="use-case-bullet"></span>
+              <span class="use-case-name">School</span>
+            </div>
+            <div class="use-case-item">
+              <span class="use-case-bullet"></span>
+              <span class="use-case-name">Work</span>
+            </div>
+            <div class="use-case-item">
+              <span class="use-case-bullet"></span>
+              <span class="use-case-name">Social media</span>
+            </div>
+            <div class="use-case-item">
+              <span class="use-case-bullet"></span>
+              <span class="use-case-name">Gaming</span>
+            </div>
+            <div class="use-case-item">
+              <span class="use-case-bullet"></span>
+              <span class="use-case-name">Streaming</span>
+            </div>
+            <div class="use-case-item">
+              <span class="use-case-bullet"></span>
+              <span class="use-case-name">Communication</span>
+            </div>
+          </div>
+
+          <div class="problem-impact-box">
+            <h3 class="subsection-title">The Impact of Nighttime Screen Use</h3>
+            <p class="body-text">
+              High amounts of screen use, particularly near bedtime, may be associated with later bedtimes, shorter sleep duration, and poorer sleep quality. Exposure to screen lighting and high-stimulation digital media before sleep can disrupt natural circadian rhythms and interfere with restful sleep.
+            </p>
+          </div>
+
+          <div class="problem-importance-box">
+            <h3 class="subsection-title">Why This Issue Matters for College Students</h3>
+            <p class="body-text">
+              Sleep is foundational to overall student well-being and academic achievement. Inadequate or disrupted sleep directly influences:
+            </p>
+            <div class="outcomes-grid">
+              <div class="outcome-badge">Concentration</div>
+              <div class="outcome-badge">Energy Levels</div>
+              <div class="outcome-badge">Mood &amp; Mental Health</div>
+              <div class="outcome-badge">Class Attendance</div>
+              <div class="outcome-badge">Academic Performance</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. RESEARCH QUESTIONS
+         ========================================================= -->
+    <section class="section section-alt" id="questions">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Inquiry Framework</span>
+          <h2 class="section-title">Research Questions</h2>
+        </div>
+
+        <!-- Primary Research Question (Visually highlighted) -->
+        <div class="card card-primary-question">
+          <div class="question-pill">Primary Research Question</div>
+          <p class="primary-question-text">
+            “How does daily screen time relate to sleep quality among college students?”
+          </p>
+        </div>
+
+        <!-- Sub-Questions -->
+        <div class="subquestions-wrapper">
+          <h3 class="subquestions-heading">Sub-Questions</h3>
+          <div class="subquestions-list">
+            <div class="subquestion-card">
+              <span class="subquestion-number">1</span>
+              <p class="subquestion-text">Do students with higher daily screen time report fewer hours of sleep?</p>
+            </div>
+            <div class="subquestion-card">
+              <span class="subquestion-number">2</span>
+              <p class="subquestion-text">Is screen use before bedtime associated with poorer sleep quality?</p>
+            </div>
+            <div class="subquestion-card">
+              <span class="subquestion-number">3</span>
+              <p class="subquestion-text">Does the type of screen activity, such as gaming, studying, streaming, or social media, relate differently to sleep?</p>
+            </div>
+            <div class="subquestion-card">
+              <span class="subquestion-number">4</span>
+              <p class="subquestion-text">Is higher screen time associated with later bedtimes?</p>
+            </div>
+            <div class="subquestion-card">
+              <span class="subquestion-number">5</span>
+              <p class="subquestion-text">Is sleep quality associated with students’ academic performance?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. VARIABLES
+         ========================================================= -->
+    <section class="section" id="variables">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Analytical Structure</span>
+          <h2 class="section-title">Research Variables</h2>
+        </div>
+
+        <div class="variables-grid">
+          <!-- Independent Variables -->
+          <div class="card variable-card">
+            <div class="card-header-with-badge">
+              <h3 class="card-title">Independent Variables</h3>
+              <span class="badge badge-iv">Predictor</span>
+            </div>
+            <p class="card-description">
+              Factors measuring students’ daily and nighttime digital technology usage.
+            </p>
+            <ul class="variable-list">
+              <li>
+                <span class="var-bullet"></span>
+                <span class="var-name">Daily screen time</span>
+              </li>
+              <li>
+                <span class="var-bullet"></span>
+                <span class="var-name">Nighttime screen time</span>
+              </li>
+              <li>
+                <span class="var-bullet"></span>
+                <span class="var-name">Screen time before bed</span>
+              </li>
+              <li>
+                <span class="var-bullet"></span>
+                <span class="var-name">Social media usage</span>
+              </li>
+              <li>
+                <span class="var-bullet"></span>
+                <span class="var-name">Gaming time</span>
+              </li>
+              <li>
+                <span class="var-bullet"></span>
+                <span class="var-name">Streaming time</span>
+              </li>
+              <li>
+                <span class="var-bullet"></span>
+                <span class="var-name">Educational screen time</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Dependent Variables -->
+          <div class="card variable-card">
+            <div class="card-header-with-badge">
+              <h3 class="card-title">Dependent Variables</h3>
+              <span class="badge badge-dv">Outcome</span>
+            </div>
+            <p class="card-description">
+              Indicators reflecting students’ sleep patterns, duration, and overall restfulness.
+            </p>
+            <ul class="variable-list">
+              <li>
+                <span class="var-bullet"></span>
+                <span class="var-name">Sleep duration</span>
+              </li>
+              <li>
+                <span class="var-bullet"></span>
+                <span class="var-name">Sleep quality</span>
+              </li>
+              <li>
+                <span class="var-bullet"></span>
+                <span class="var-name">Bedtime</span>
+              </li>
+              <li>
+                <span class="var-bullet"></span>
+                <span class="var-name">Wake-up time</span>
+              </li>
+              <li>
+                <span class="var-bullet"></span>
+                <span class="var-name">Number of nighttime awakenings</span>
+              </li>
+              <li>
+                <span class="var-bullet"></span>
+                <span class="var-name">Daytime tiredness</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Additional Factors (Confounders/Covariates) -->
+        <div class="card additional-factors-card">
+          <div class="card-header-with-badge">
+            <h3 class="card-title">Additional Factors</h3>
+            <span class="badge badge-control">Covariates</span>
+          </div>
+          <p class="card-description">
+            These variables may also influence the relationship between screen time and sleep, acting as potential moderating or confounding factors:
+          </p>
+          <div class="additional-factors-chips">
+            <span class="factor-chip">Age</span>
+            <span class="factor-chip">Caffeine consumption</span>
+            <span class="factor-chip">Exercise</span>
+            <span class="factor-chip">Stress</span>
+            <span class="factor-chip">Academic workload</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. HYPOTHESES
+         ========================================================= -->
+    <section class="section section-alt" id="hypotheses">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tested Propositions</span>
+          <h2 class="section-title">Research Hypotheses</h2>
+        </div>
+
+        <div class="hypotheses-grid">
+          <!-- H1 -->
+          <div class="card hypothesis-card">
+            <div class="hypothesis-badge">H1</div>
+            <div class="hypothesis-content">
+              <span class="hypothesis-label">Hypothesis 1</span>
+              <p class="hypothesis-statement">
+                Students with higher daily screen time will report lower sleep quality than students with lower daily screen time.
+              </p>
+            </div>
+          </div>
+
+          <!-- H2 -->
+          <div class="card hypothesis-card">
+            <div class="hypothesis-badge">H2</div>
+            <div class="hypothesis-content">
+              <span class="hypothesis-label">Hypothesis 2</span>
+              <p class="hypothesis-statement">
+                Students who spend more time using screens before bed will report shorter average sleep duration.
+              </p>
+            </div>
+          </div>
+
+          <!-- H3 -->
+          <div class="card hypothesis-card">
+            <div class="hypothesis-badge">H3</div>
+            <div class="hypothesis-content">
+              <span class="hypothesis-label">Hypothesis 3</span>
+              <p class="hypothesis-statement">
+                Students with greater nighttime screen use will report later average bedtimes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. DATASET
+         Information placeholder for Kaggle dataset integration
+         (No invented statistics or results)
+         ========================================================= -->
+    <section class="section" id="dataset">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Empirical Data</span>
+          <h2 class="section-title">Dataset</h2>
+        </div>
+
+        <!-- Kaggle Dataset Overview Placeholder -->
+        <div class="card dataset-card">
+          <div class="dataset-card-header">
+            <div class="dataset-status-pill">Awaiting Dataset Selection</div>
+            <span class="dataset-source-note">Kaggle Open Data</span>
+          </div>
+
+          <div class="dataset-metadata-grid">
+            <div class="metadata-box">
+              <span class="meta-box-label">Dataset Name</span>
+              <span class="meta-box-value placeholder-value">[ To be selected from Kaggle ]</span>
+            </div>
+            <div class="metadata-box">
+              <span class="meta-box-label">Kaggle Source</span>
+              <span class="meta-box-value placeholder-value">[ URL to Kaggle dataset repository ]</span>
+            </div>
+            <div class="metadata-box">
+              <span class="meta-box-label">Number of Records</span>
+              <span class="meta-box-value placeholder-value">[ Pending dataset ingestion ]</span>
+            </div>
+            <div class="metadata-box">
+              <span class="meta-box-label">Number of Variables</span>
+              <span class="meta-box-value placeholder-value">[ Pending dataset ingestion ]</span>
+            </div>
+          </div>
+
+          <div class="dataset-description-box">
+            <h3 class="subsection-title">Dataset Description</h3>
+            <p class="placeholder-text">
+              <!-- DATASET INTEGRATION COMMENT:
+                   Once the Kaggle dataset is chosen, replace this placeholder paragraph with
+                   a summary describing the dataset's collection methodology, student demographic,
+                   sampling timeframe, and original authors. -->
+              [ A detailed summary of the chosen Kaggle dataset will be provided here once the dataset is finalized. This description will outline sample size, participant demographics, data collection methods, and variable definitions. ]
+            </p>
+          </div>
+        </div>
+
+        <!-- Key Variables From Dataset -->
+        <div class="card key-variables-card">
+          <div class="card-header-with-badge">
+            <h3 class="card-title">Key Variables From Dataset</h3>
+            <span class="badge badge-neutral">Field Mapping</span>
+          </div>
+          <p class="card-description">
+            <!-- DATASET INTEGRATION COMMENT:
+                 Update this section once dataset columns are identified. You can map dataset column
+                 names directly to our independent and dependent research variables. -->
+            This section will list and define the exact data fields extracted from the Kaggle dataset once chosen.
+          </p>
+
+          <div class="key-variables-placeholder-grid">
+            <div class="key-var-item">
+              <span class="key-var-status">Pending Field</span>
+              <div class="key-var-name">Field 1: Daily Screen Duration</div>
+              <div class="key-var-desc">[ Description and measurement unit from dataset ]</div>
+            </div>
+            <div class="key-var-item">
+              <span class="key-var-status">Pending Field</span>
+              <div class="key-var-name">Field 2: Pre-Sleep Screen Habits</div>
+              <div class="key-var-desc">[ Description and measurement unit from dataset ]</div>
+            </div>
+            <div class="key-var-item">
+              <span class="key-var-status">Pending Field</span>
+              <div class="key-var-name">Field 3: Sleep Quality Rating</div>
+              <div class="key-var-desc">[ Scale / metric definition from dataset ]</div>
+            </div>
+            <div class="key-var-item">
+              <span class="key-var-status">Pending Field</span>
+              <div class="key-var-name">Field 4: Sleep Duration (Hours)</div>
+              <div class="key-var-desc">[ Description and measurement unit from dataset ]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. ANALYSIS
+         Placeholder sections for future analysis and visual charts
+         (No invented statistics or results)
+         ========================================================= -->
+    <section class="section section-alt" id="analysis">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Empirical Findings</span>
+          <h2 class="section-title">Data Analysis</h2>
+        </div>
+
+        <p class="section-intro">
+          Placeholder modules for visual charts, statistical distributions, and correlation models. These sections will be populated after data ingestion and exploratory analysis.
+        </p>
+
+        <div class="analysis-grid">
+          <!-- 1. Screen Time Distribution -->
+          <!-- ANALYSIS COMMENT: Insert histogram or density plot of student daily screen time here (e.g. Chart.js, D3, or static export) -->
+          <div class="card analysis-card">
+            <div class="analysis-header">
+              <span class="analysis-tag">Analysis 01</span>
+              <h3 class="analysis-title">Screen Time Distribution</h3>
+            </div>
+            <div class="chart-placeholder">
+              <svg class="placeholder-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="3" stroke-dasharray="3 3"/>
+                <path d="M7 16V12M12 16V8M17 16V14"/>
+              </svg>
+              <span class="placeholder-label">Distribution Visualization Placeholder</span>
+              <span class="placeholder-sublabel">Histogram / frequency curve of total daily screen hours across participants</span>
+            </div>
+            <p class="analysis-notes">[ Future analysis: Summary metrics including mean, median, standard deviation, and range of daily screen exposure. ]</p>
+          </div>
+
+          <!-- 2. Average Sleep Duration -->
+          <!-- ANALYSIS COMMENT: Insert sleep duration distribution and descriptive summary statistics here -->
+          <div class="card analysis-card">
+            <div class="analysis-header">
+              <span class="analysis-tag">Analysis 02</span>
+              <h3 class="analysis-title">Average Sleep Duration</h3>
+            </div>
+            <div class="chart-placeholder">
+              <svg class="placeholder-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="3" stroke-dasharray="3 3"/>
+                <circle cx="12" cy="12" r="5"/>
+                <polyline points="12 9 12 12 14.5 13.5"/>
+              </svg>
+              <span class="placeholder-label">Duration Metrics Placeholder</span>
+              <span class="placeholder-sublabel">Box plot or metric cards showing reported hours of nightly sleep</span>
+            </div>
+            <p class="analysis-notes">[ Future analysis: Percentage of students meeting recommended sleep guidelines (7–9 hours). ]</p>
+          </div>
+
+          <!-- 3. Screen Time vs. Sleep Duration -->
+          <!-- ANALYSIS COMMENT: Insert scatter plot and linear regression analysis here -->
+          <div class="card analysis-card">
+            <div class="analysis-header">
+              <span class="analysis-tag">Analysis 03</span>
+              <h3 class="analysis-title">Screen Time vs. Sleep Duration</h3>
+            </div>
+            <div class="chart-placeholder">
+              <svg class="placeholder-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="3" stroke-dasharray="3 3"/>
+                <path d="M7 17L17 7M7 12L12 7M12 17L17 12"/>
+              </svg>
+              <span class="placeholder-label">Bivariate Correlation Placeholder</span>
+              <span class="placeholder-sublabel">Scatter plot with regression trendline comparing screen hours to sleep duration</span>
+            </div>
+            <p class="analysis-notes">[ Future analysis: Correlation coefficient (r) and statistical significance testing between variables. ]</p>
+          </div>
+
+          <!-- 4. Screen Time vs. Sleep Quality -->
+          <!-- ANALYSIS COMMENT: Insert comparative bar chart or correlation matrix here -->
+          <div class="card analysis-card">
+            <div class="analysis-header">
+              <span class="analysis-tag">Analysis 04</span>
+              <h3 class="analysis-title">Screen Time vs. Sleep Quality</h3>
+            </div>
+            <div class="chart-placeholder">
+              <svg class="placeholder-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="3" stroke-dasharray="3 3"/>
+                <path d="M6 15C8 12 10 11 12 11C14 11 16 13 18 13"/>
+              </svg>
+              <span class="placeholder-label">Quality Comparison Placeholder</span>
+              <span class="placeholder-sublabel">Comparative ratings of reported restfulness segmented by daily screen time brackets</span>
+            </div>
+            <p class="analysis-notes">[ Future analysis: Evaluation of H1 regarding perceived sleep quality differences. ]</p>
+          </div>
+
+          <!-- 5. Nighttime Screen Usage -->
+          <!-- ANALYSIS COMMENT: Insert bedtime screen exposure and bedtime delay chart here -->
+          <div class="card analysis-card">
+            <div class="analysis-header">
+              <span class="analysis-tag">Analysis 05</span>
+              <h3 class="analysis-title">Nighttime Screen Usage</h3>
+            </div>
+            <div class="chart-placeholder">
+              <svg class="placeholder-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="3" stroke-dasharray="3 3"/>
+                <path d="M12 3A6 6 0 0 0 9 14.2A6 6 0 1 1 12 3z"/>
+              </svg>
+              <span class="placeholder-label">Pre-Bedtime Exposure Placeholder</span>
+              <span class="placeholder-sublabel">Analysis of screen activity 1–2 hours before sleep vs. actual sleep onset times</span>
+            </div>
+            <p class="analysis-notes">[ Future analysis: Evaluation of H2 and H3 regarding pre-sleep technology habits. ]</p>
+          </div>
+
+          <!-- 6. Key Findings -->
+          <!-- ANALYSIS COMMENT: Insert final synthesis, hypothesis conclusions, and summary takeaways here -->
+          <div class="card analysis-card">
+            <div class="analysis-header">
+              <span class="analysis-tag">Analysis 06</span>
+              <h3 class="analysis-title">Key Findings</h3>
+            </div>
+            <div class="chart-placeholder findings-placeholder">
+              <svg class="placeholder-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="3" stroke-dasharray="3 3"/>
+                <path d="M9 11L11 13L15 9"/>
+              </svg>
+              <span class="placeholder-label">Synthesis &amp; Conclusions Placeholder</span>
+              <span class="placeholder-sublabel">Structured summary of confirmed vs. rejected research hypotheses</span>
+            </div>
+            <p class="analysis-notes">[ Future analysis: Actionable takeaways for student health, academic performance, and future research. ]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         8. ABOUT
+         ========================================================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Project Information</span>
+          <h2 class="section-title">About This Project</h2>
+        </div>
+
+        <div class="card about-card">
+          <div class="about-grid">
+            <div class="about-info-col">
+              <div class="about-meta-row">
+                <span class="about-label">Student</span>
+                <span class="about-value">Seth Edwards</span>
+              </div>
+              <div class="about-meta-row">
+                <span class="about-label">Course</span>
+                <span class="about-value">TECH 3745 01</span>
+              </div>
+              <div class="about-meta-row">
+                <span class="about-label">Research Topic</span>
+                <span class="about-value">The Relationship Between Screen Time and Sleep Quality Among Students</span>
+              </div>
+            </div>
+
+            <div class="about-desc-col">
+              <h3 class="about-col-title">Project Purpose &amp; Scope</h3>
+              <p class="body-text">
+                This project investigates whether students’ technology habits are associated with differences in sleep duration and sleep quality using data analysis.
+              </p>
+              <p class="body-text">
+                Through empirical analysis of student screen usage patterns across academic, leisure, and pre-bedtime contexts, this research aims to identify meaningful relationships that can inform healthy technology habits and support overall student health and academic success.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-text">
+        <p class="footer-title">The Relationship Between Screen Time and Sleep Quality Among Students</p>
+        <p class="footer-sub">Seth Edwards &bull; TECH 3745 01 &bull; College Research Project</p>
+      </div>
+      <a href="#home" class="back-to-top" aria-label="Back to top">
+        <span>Back to Top</span>
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 12.6667V3.33334M8 3.33334L3.33333 8M8 3.33334L12.6667 8" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
