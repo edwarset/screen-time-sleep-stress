@@ -6,6 +6,9 @@
   <meta name="description" content="A college research project investigating the relationship between students' screen time and sleep quality by Seth Edwards for TECH 3745 01.">
   <title>The Relationship Between Screen Time and Sleep Quality Among Students</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .analysis-chart { width:100%; height:auto; display:block; margin:18px 0; border-radius:12px; }
+  </style>
 </head>
 <body>
 
@@ -374,26 +377,26 @@
         <!-- Kaggle Dataset Overview Placeholder -->
         <div class="card dataset-card">
           <div class="dataset-card-header">
-            <div class="dataset-status-pill">Awaiting Dataset Selection</div>
+            <div class="dataset-status-pill">Dataset Integrated</div>
             <span class="dataset-source-note">Kaggle Open Data</span>
           </div>
 
           <div class="dataset-metadata-grid">
             <div class="metadata-box">
               <span class="meta-box-label">Dataset Name</span>
-              <span class="meta-box-value placeholder-value">[ To be selected from Kaggle ]</span>
+              <span class="meta-box-value placeholder-value">Sleep, Screen Time and Stress Analysis</span>
             </div>
             <div class="metadata-box">
               <span class="meta-box-label">Kaggle Source</span>
-              <span class="meta-box-value placeholder-value">[ URL to Kaggle dataset repository ]</span>
+              <span class="meta-box-value placeholder-value">Kaggle Open Dataset</span>
             </div>
             <div class="metadata-box">
               <span class="meta-box-label">Number of Records</span>
-              <span class="meta-box-value placeholder-value">[ Pending dataset ingestion ]</span>
+              <span class="meta-box-value placeholder-value">15,000</span>
             </div>
             <div class="metadata-box">
               <span class="meta-box-label">Number of Variables</span>
-              <span class="meta-box-value placeholder-value">[ Pending dataset ingestion ]</span>
+              <span class="meta-box-value placeholder-value">13</span>
             </div>
           </div>
 
@@ -404,7 +407,7 @@
                    Once the Kaggle dataset is chosen, replace this placeholder paragraph with
                    a summary describing the dataset's collection methodology, student demographic,
                    sampling timeframe, and original authors. -->
-              [ A detailed summary of the chosen Kaggle dataset will be provided here once the dataset is finalized. This description will outline sample size, participant demographics, data collection methods, and variable definitions. ]
+              The selected Kaggle dataset contains 15,000 records and 13 variables describing digital habits and health-related indicators. Participants range from ages 18 to 59. Key measures include daily screen time, phone use before sleep, sleep duration, sleep quality, stress level, caffeine intake, physical activity, daily notifications, and mental fatigue.
             </p>
           </div>
         </div>
@@ -424,24 +427,24 @@
 
           <div class="key-variables-placeholder-grid">
             <div class="key-var-item">
-              <span class="key-var-status">Pending Field</span>
-              <div class="key-var-name">Field 1: Daily Screen Duration</div>
-              <div class="key-var-desc">[ Description and measurement unit from dataset ]</div>
+              <span class="key-var-status">Dataset Field</span>
+              <div class="key-var-name">daily_screen_time_hours</div>
+              <div class="key-var-desc">Daily screen exposure measured in hours.</div>
             </div>
             <div class="key-var-item">
-              <span class="key-var-status">Pending Field</span>
-              <div class="key-var-name">Field 2: Pre-Sleep Screen Habits</div>
-              <div class="key-var-desc">[ Description and measurement unit from dataset ]</div>
+              <span class="key-var-status">Dataset Field</span>
+              <div class="key-var-name">phone_usage_before_sleep_minutes</div>
+              <div class="key-var-desc">Daily screen exposure measured in hours.</div>
             </div>
             <div class="key-var-item">
-              <span class="key-var-status">Pending Field</span>
-              <div class="key-var-name">Field 3: Sleep Quality Rating</div>
-              <div class="key-var-desc">[ Scale / metric definition from dataset ]</div>
+              <span class="key-var-status">Dataset Field</span>
+              <div class="key-var-name">sleep_quality_score</div>
+              <div class="key-var-desc">Reported sleep-quality score on a 1–10 scale.</div>
             </div>
             <div class="key-var-item">
-              <span class="key-var-status">Pending Field</span>
-              <div class="key-var-name">Field 4: Sleep Duration (Hours)</div>
-              <div class="key-var-desc">[ Description and measurement unit from dataset ]</div>
+              <span class="key-var-status">Dataset Field</span>
+              <div class="key-var-name">sleep_duration_hours</div>
+              <div class="key-var-desc">Daily screen exposure measured in hours.</div>
             </div>
           </div>
         </div>
@@ -461,118 +464,16 @@
         </div>
 
         <p class="section-intro">
-          Placeholder modules for visual charts, statistical distributions, and correlation models. These sections will be populated after data ingestion and exploratory analysis.
+          Preliminary exploratory analysis of the Kaggle dataset. The visualizations below summarize screen use, sleep patterns, and relationships among the measured variables.
         </p>
 
         <div class="analysis-grid">
-          <!-- 1. Screen Time Distribution -->
-          <!-- ANALYSIS COMMENT: Insert histogram or density plot of student daily screen time here (e.g. Chart.js, D3, or static export) -->
-          <div class="card analysis-card">
-            <div class="analysis-header">
-              <span class="analysis-tag">Analysis 01</span>
-              <h3 class="analysis-title">Screen Time Distribution</h3>
-            </div>
-            <div class="chart-placeholder">
-              <svg class="placeholder-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="3" stroke-dasharray="3 3"/>
-                <path d="M7 16V12M12 16V8M17 16V14"/>
-              </svg>
-              <span class="placeholder-label">Distribution Visualization Placeholder</span>
-              <span class="placeholder-sublabel">Histogram / frequency curve of total daily screen hours across participants</span>
-            </div>
-            <p class="analysis-notes">[ Future analysis: Summary metrics including mean, median, standard deviation, and range of daily screen exposure. ]</p>
-          </div>
-
-          <!-- 2. Average Sleep Duration -->
-          <!-- ANALYSIS COMMENT: Insert sleep duration distribution and descriptive summary statistics here -->
-          <div class="card analysis-card">
-            <div class="analysis-header">
-              <span class="analysis-tag">Analysis 02</span>
-              <h3 class="analysis-title">Average Sleep Duration</h3>
-            </div>
-            <div class="chart-placeholder">
-              <svg class="placeholder-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="3" stroke-dasharray="3 3"/>
-                <circle cx="12" cy="12" r="5"/>
-                <polyline points="12 9 12 12 14.5 13.5"/>
-              </svg>
-              <span class="placeholder-label">Duration Metrics Placeholder</span>
-              <span class="placeholder-sublabel">Box plot or metric cards showing reported hours of nightly sleep</span>
-            </div>
-            <p class="analysis-notes">[ Future analysis: Percentage of students meeting recommended sleep guidelines (7–9 hours). ]</p>
-          </div>
-
-          <!-- 3. Screen Time vs. Sleep Duration -->
-          <!-- ANALYSIS COMMENT: Insert scatter plot and linear regression analysis here -->
-          <div class="card analysis-card">
-            <div class="analysis-header">
-              <span class="analysis-tag">Analysis 03</span>
-              <h3 class="analysis-title">Screen Time vs. Sleep Duration</h3>
-            </div>
-            <div class="chart-placeholder">
-              <svg class="placeholder-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="3" stroke-dasharray="3 3"/>
-                <path d="M7 17L17 7M7 12L12 7M12 17L17 12"/>
-              </svg>
-              <span class="placeholder-label">Bivariate Correlation Placeholder</span>
-              <span class="placeholder-sublabel">Scatter plot with regression trendline comparing screen hours to sleep duration</span>
-            </div>
-            <p class="analysis-notes">[ Future analysis: Correlation coefficient (r) and statistical significance testing between variables. ]</p>
-          </div>
-
-          <!-- 4. Screen Time vs. Sleep Quality -->
-          <!-- ANALYSIS COMMENT: Insert comparative bar chart or correlation matrix here -->
-          <div class="card analysis-card">
-            <div class="analysis-header">
-              <span class="analysis-tag">Analysis 04</span>
-              <h3 class="analysis-title">Screen Time vs. Sleep Quality</h3>
-            </div>
-            <div class="chart-placeholder">
-              <svg class="placeholder-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="3" stroke-dasharray="3 3"/>
-                <path d="M6 15C8 12 10 11 12 11C14 11 16 13 18 13"/>
-              </svg>
-              <span class="placeholder-label">Quality Comparison Placeholder</span>
-              <span class="placeholder-sublabel">Comparative ratings of reported restfulness segmented by daily screen time brackets</span>
-            </div>
-            <p class="analysis-notes">[ Future analysis: Evaluation of H1 regarding perceived sleep quality differences. ]</p>
-          </div>
-
-          <!-- 5. Nighttime Screen Usage -->
-          <!-- ANALYSIS COMMENT: Insert bedtime screen exposure and bedtime delay chart here -->
-          <div class="card analysis-card">
-            <div class="analysis-header">
-              <span class="analysis-tag">Analysis 05</span>
-              <h3 class="analysis-title">Nighttime Screen Usage</h3>
-            </div>
-            <div class="chart-placeholder">
-              <svg class="placeholder-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="3" stroke-dasharray="3 3"/>
-                <path d="M12 3A6 6 0 0 0 9 14.2A6 6 0 1 1 12 3z"/>
-              </svg>
-              <span class="placeholder-label">Pre-Bedtime Exposure Placeholder</span>
-              <span class="placeholder-sublabel">Analysis of screen activity 1–2 hours before sleep vs. actual sleep onset times</span>
-            </div>
-            <p class="analysis-notes">[ Future analysis: Evaluation of H2 and H3 regarding pre-sleep technology habits. ]</p>
-          </div>
-
-          <!-- 6. Key Findings -->
-          <!-- ANALYSIS COMMENT: Insert final synthesis, hypothesis conclusions, and summary takeaways here -->
-          <div class="card analysis-card">
-            <div class="analysis-header">
-              <span class="analysis-tag">Analysis 06</span>
-              <h3 class="analysis-title">Key Findings</h3>
-            </div>
-            <div class="chart-placeholder findings-placeholder">
-              <svg class="placeholder-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="3" stroke-dasharray="3 3"/>
-                <path d="M9 11L11 13L15 9"/>
-              </svg>
-              <span class="placeholder-label">Synthesis &amp; Conclusions Placeholder</span>
-              <span class="placeholder-sublabel">Structured summary of confirmed vs. rejected research hypotheses</span>
-            </div>
-            <p class="analysis-notes">[ Future analysis: Actionable takeaways for student health, academic performance, and future research. ]</p>
-          </div>
+          <div class="card analysis-card"><div class="analysis-header"><span class="analysis-tag">Analysis 01</span><h3 class="analysis-title">Screen Time Distribution</h3></div><img class="analysis-chart" src="graphs/screen-time-distribution.png" alt="Histogram of daily screen time usage"><p class="analysis-notes">Daily screen time averages about 5.50 hours in the dataset, with values ranging from 1 to 10 hours.</p></div>
+          <div class="card analysis-card"><div class="analysis-header"><span class="analysis-tag">Analysis 02</span><h3 class="analysis-title">Screen Time vs. Sleep Duration</h3></div><img class="analysis-chart" src="graphs/screen-time-vs-sleep.png" alt="Scatter plot of screen time versus sleep duration"><p class="analysis-notes">This scatter plot compares daily screen-time hours with nightly sleep duration and separates observations by gender.</p></div>
+          <div class="card analysis-card"><div class="analysis-header"><span class="analysis-tag">Analysis 03</span><h3 class="analysis-title">Screen Time by Gender</h3></div><img class="analysis-chart" src="graphs/screen-time-gender-boxplot.png" alt="Box plot comparing daily screen time by gender"><p class="analysis-notes">This box plot compares the distribution of daily screen-time usage across gender categories.</p></div>
+          <div class="card analysis-card"><div class="analysis-header"><span class="analysis-tag">Analysis 04</span><h3 class="analysis-title">Nightly Sleep Duration</h3></div><img class="analysis-chart" src="graphs/sleep-duration-distribution.png" alt="Histogram of nightly sleep duration"><p class="analysis-notes">Average nightly sleep duration is about 6.51 hours, with observations ranging from 4 to 9 hours.</p></div>
+          <div class="card analysis-card"><div class="analysis-header"><span class="analysis-tag">Analysis 05</span><h3 class="analysis-title">Correlation Matrix</h3></div><img class="analysis-chart" src="graphs/correlation-matrix.png" alt="Correlation matrix of digital lifestyle and health indicators"><p class="analysis-notes">The correlation matrix provides an overview of the linear relationships among the dataset's numeric digital-lifestyle and health indicators.</p></div>
+          <div class="card analysis-card"><div class="analysis-header"><span class="analysis-tag">Dataset Summary</span><h3 class="analysis-title">Preliminary Descriptive Statistics</h3></div><div class="chart-placeholder findings-placeholder"><span class="placeholder-label">15,000 observations · 13 variables</span><span class="placeholder-sublabel">Mean screen time: 5.50 h · Mean sleep: 6.51 h · Mean sleep quality: 6.25/10 · Mean stress: 6.98/10</span></div><p class="analysis-notes">These descriptive values come directly from the uploaded Kaggle notebook and provide context for interpreting the preliminary visualizations.</p></div>
         </div>
       </div>
     </section>
