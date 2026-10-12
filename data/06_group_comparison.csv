@@ -1,4 +1,4 @@
-screen_time_group,participants,avg_sleep_quality,avg_sleep_duration
-High (>6h),6615,5.0,6.51
-Moderate (3-6h),5037,6.74,6.5
-Low (<=3h),3348,7.96,6.52
+screen_time_group,participants,avg_sleep_quality,avg_stress
+Low (<=3h),3348,7.96,3.42
+Moderate (3-6h),5037,6.74,6.25
+High (>6h),6615,5.0,9.34
