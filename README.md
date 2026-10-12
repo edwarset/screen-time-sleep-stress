@@ -1,4 +1,4 @@
-# The Relationship Between Screen Time and Sleep Quality Among Students
+# The Relationship Between Screen Time, Sleep,and Stress
 
 > **College Research Project**  
 > **Lead Researcher:** Seth Edwards  
