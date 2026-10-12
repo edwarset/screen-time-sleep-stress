@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="A college research project investigating the relationship between students' screen time and sleep quality by Seth Edwards for TECH 3745 01." name="description"/>
+<title>The Relationship Between Screen Time and Sleep Quality Among Students</title>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+    .analysis-chart { width:100%; height:auto; display:block; margin:18px 0; border-radius:12px; }
+  </style>
+<style>
+.assignment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:18px}.assignment-panel{background:#fff;border:1px solid #e3e8ed;border-radius:16px;padding:24px;margin:16px 0;color:#243341}.assignment-panel h3{margin:0 0 12px}.assignment-panel p,.assignment-panel li{line-height:1.65}.assignment-panel code,.assignment-panel pre{white-space:pre-wrap;overflow-wrap:anywhere}.assignment-panel pre{background:#142334;color:#e9f1f9;border-radius:10px;padding:18px;overflow:auto;font-size:13px}.assignment-note{background:#f0f5fa;border-left:4px solid #476a90;padding:12px 16px;margin:14px 0;border-radius:4px}.assignment-panel table{border-collapse:collapse;width:100%}.assignment-panel td,.assignment-panel th{border:1px solid #d9e0e8;padding:10px;text-align:left}.assignment-panel th{background:#edf3f8}.assignment-chart-placeholder{min-height:165px;display:grid;place-items:center;border:2px dashed #bcc9d7;border-radius:12px;color:#5e7182;text-align:center;padding:16px}.assignment-small{font-size:0.9rem;color:#526678}
+</style></head>
+<body>
+<!-- =========================================================
+       HEADER & MINIMAL NAVIGATION
+       Single header with title and hamburger menu button only
+       ========================================================= -->
+<header class="site-header" id="siteHeader">
+<div class="header-container">
+<a aria-label="Return to top of page" class="header-title" href="#home">
+        The Relationship Between Screen Time and Sleep Quality Among Students
+      </a>
+<button aria-controls="navMenu" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" id="menuToggle">
+<span class="hamburger-box">
+<span class="hamburger-inner"></span>
+</span>
+</button>
+</div>
+</header>
+<!-- =========================================================
+       SLEEK NAVIGATION DRAWER / OVERLAY
+       Opens when the menu button in the upper-right corner is clicked
+       ========================================================= -->
+<div aria-hidden="true" class="nav-overlay" id="navOverlay">
+<nav aria-label="Main Navigation" class="nav-drawer" id="navMenu">
+<div class="drawer-header">
+<span class="drawer-subtitle">Research Navigation</span>
+<button aria-label="Close navigation menu" class="close-button" id="closeMenu">×</button>
+</div>
+<ul class="nav-list">
+<li><a class="nav-link" href="#home"><span class="nav-num">01</span><span class="nav-text">Home</span></a></li>
+<li><a class="nav-link" href="#problem"><span class="nav-num">02</span><span class="nav-text">Research Problem</span></a></li>
+<li><a class="nav-link" href="#questions"><span class="nav-num">03</span><span class="nav-text">Research Questions</span></a></li>
+<li><a class="nav-link" href="#variables"><span class="nav-num">04</span><span class="nav-text">Variables</span></a></li>
+<li><a class="nav-link" href="#hypotheses"><span class="nav-num">05</span><span class="nav-text">Hypotheses</span></a></li>
+<li><a class="nav-link" href="#dataset"><span class="nav-num">06</span><span class="nav-text">Dataset</span></a></li>
+<li><a class="nav-link" href="#analysis"><span class="nav-num">07</span><span class="nav-text">Analysis</span></a></li>
+<li><a class="nav-link" href="#about"><span class="nav-num">08</span><span class="nav-text">About</span></a></li>
+<li><a class="nav-link" href="#cleaning">09  Data Cleaning</a></li><li><a class="nav-link" href="#sql">10  SQL Queries</a></li><li><a class="nav-link" href="#sql-charts">11  SQL Charts</a></li><li><a class="nav-link" href="#findings">12  Research Findings</a></li></ul>
+<div class="drawer-footer">
+<div class="drawer-student">Seth Edwards</div>
+<div class="drawer-course">TECH 3745 01</div>
+</div>
+</nav>
+</div>
+<main>
+<!-- =========================================================
+         1. HOME (HERO SECTION)
+         ========================================================= -->
+<section class="section hero-section" id="home">
+<div class="container hero-content">
+<div class="academic-badge">Academic Research Project</div>
+<h1 class="hero-title">The Relationship Between Screen Time and Sleep Quality Among Students</h1>
+<p class="hero-subtitle">
+          Exploring how daily technology use may relate to sleep duration and sleep quality among students.
+        </p>
+<div class="hero-meta">
+<div class="meta-item">
+<span class="meta-label">Researcher</span>
+<span class="meta-value">Seth Edwards</span>
+</div>
+<div class="meta-divider"></div>
+<div class="meta-item">
+<span class="meta-label">Course</span>
+<span class="meta-value">TECH 3745 01</span>
+</div>
+</div>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#problem">
+<span>Explore the Research</span>
+<svg class="btn-arrow" fill="none" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 3.33334V12.6667M8 12.6667L12.6667 8M8 12.6667L3.33333 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"></path>
+</svg>
+</a>
+</div>
+</div>
+</section>
+<!-- =========================================================
+         2. RESEARCH PROBLEM
+         ========================================================= -->
+<section class="section" id="problem">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Context &amp; Significance</span>
+<h2 class="section-title">Research Problem</h2>
+</div>
+<div class="card card-narrative">
+<p class="lead-text">
+            Smartphones, computers, tablets, televisions, and gaming systems have become major parts of students’ everyday lives.
+          </p>
+<p class="body-text">
+            Across modern university campuses, digital displays are involved in virtually every daily routine. Students continuously interact with screens for diverse academic, vocational, and personal activities:
+          </p>
+<div class="use-cases-grid">
+<div class="use-case-item">
+<span class="use-case-bullet"></span>
+<span class="use-case-name">School</span>
+</div>
+<div class="use-case-item">
+<span class="use-case-bullet"></span>
+<span class="use-case-name">Work</span>
+</div>
+<div class="use-case-item">
+<span class="use-case-bullet"></span>
+<span class="use-case-name">Social media</span>
+</div>
+<div class="use-case-item">
+<span class="use-case-bullet"></span>
+<span class="use-case-name">Gaming</span>
+</div>
+<div class="use-case-item">
+<span class="use-case-bullet"></span>
+<span class="use-case-name">Streaming</span>
+</div>
+<div class="use-case-item">
+<span class="use-case-bullet"></span>
+<span class="use-case-name">Communication</span>
+</div>
+</div>
+<div class="problem-impact-box">
+<h3 class="subsection-title">The Impact of Nighttime Screen Use</h3>
+<p class="body-text">
+              High amounts of screen use, particularly near bedtime, may be associated with later bedtimes, shorter sleep duration, and poorer sleep quality. Exposure to screen lighting and high-stimulation digital media before sleep can disrupt natural circadian rhythms and interfere with restful sleep.
+            </p>
+</div>
+<div class="problem-importance-box">
+<h3 class="subsection-title">Why This Issue Matters for College Students</h3>
+<p class="body-text">
+              Sleep is foundational to overall student well-being and academic achievement. Inadequate or disrupted sleep directly influences:
+            </p>
+<div class="outcomes-grid">
+<div class="outcome-badge">Concentration</div>
+<div class="outcome-badge">Energy Levels</div>
+<div class="outcome-badge">Mood &amp; Mental Health</div>
+<div class="outcome-badge">Class Attendance</div>
+<div class="outcome-badge">Academic Performance</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================
+         3. RESEARCH QUESTIONS
+         ========================================================= -->
+<section class="section section-alt" id="questions">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Inquiry Framework</span>
+<h2 class="section-title">Research Questions</h2>
+</div>
+<!-- Primary Research Question (Visually highlighted) -->
+<div class="card card-primary-question">
+<div class="question-pill">Primary Research Question</div>
+<p class="primary-question-text">
+            “How does daily screen time relate to sleep quality among college students?”
+          </p>
+</div>
+<!-- Sub-Questions -->
+<div class="subquestions-wrapper">
+<h3 class="subquestions-heading">Sub-Questions</h3>
+<div class="subquestions-list">
+<div class="subquestion-card">
+<span class="subquestion-number">1</span>
+<p class="subquestion-text">Do students with higher daily screen time report fewer hours of sleep?</p>
+</div>
+<div class="subquestion-card">
+<span class="subquestion-number">2</span>
+<p class="subquestion-text">Is screen use before bedtime associated with poorer sleep quality?</p>
+</div>
+<div class="subquestion-card">
+<span class="subquestion-number">3</span>
+<p class="subquestion-text">Does the type of screen activity, such as gaming, studying, streaming, or social media, relate differently to sleep?</p>
+</div>
+<div class="subquestion-card">
+<span class="subquestion-number">4</span>
+<p class="subquestion-text">Is higher screen time associated with later bedtimes?</p>
+</div>
+<div class="subquestion-card">
+<span class="subquestion-number">5</span>
+<p class="subquestion-text">Is sleep quality associated with students’ academic performance?</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================
+         4. VARIABLES
+         ========================================================= -->
+<section class="section" id="variables">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Analytical Structure</span>
+<h2 class="section-title">Research Variables</h2>
+</div>
+<div class="variables-grid">
+<!-- Independent Variables -->
+<div class="card variable-card">
+<div class="card-header-with-badge">
+<h3 class="card-title">Independent Variables</h3>
+<span class="badge badge-iv">Predictor</span>
+</div>
+<p class="card-description">
+              Factors measuring students’ daily and nighttime digital technology usage.
+            </p>
+<ul class="variable-list">
+<li>
+<span class="var-bullet"></span>
+<span class="var-name">Daily screen time</span>
+</li>
+<li>
+<span class="var-bullet"></span>
+<span class="var-name">Nighttime screen time</span>
+</li>
+<li>
+<span class="var-bullet"></span>
+<span class="var-name">Screen time before bed</span>
+</li>
+<li>
+<span class="var-bullet"></span>
+<span class="var-name">Social media usage</span>
+</li>
+<li>
+<span class="var-bullet"></span>
+<span class="var-name">Gaming time</span>
+</li>
+<li>
+<span class="var-bullet"></span>
+<span class="var-name">Streaming time</span>
+</li>
+<li>
+<span class="var-bullet"></span>
+<span class="var-name">Educational screen time</span>
+</li>
+</ul>
+</div>
+<!-- Dependent Variables -->
+<div class="card variable-card">
+<div class="card-header-with-badge">
+<h3 class="card-title">Dependent Variables</h3>
+<span class="badge badge-dv">Outcome</span>
+</div>
+<p class="card-description">
+              Indicators reflecting students’ sleep patterns, duration, and overall restfulness.
+            </p>
+<ul class="variable-list">
+<li>
+<span class="var-bullet"></span>
+<span class="var-name">Sleep duration</span>
+</li>
+<li>
+<span class="var-bullet"></span>
+<span class="var-name">Sleep quality</span>
+</li>
+<li>
+<span class="var-bullet"></span>
+<span class="var-name">Bedtime</span>
+</li>
+<li>
+<span class="var-bullet"></span>
+<span class="var-name">Wake-up time</span>
+</li>
+<li>
+<span class="var-bullet"></span>
+<span class="var-name">Number of nighttime awakenings</span>
+</li>
+<li>
+<span class="var-bullet"></span>
+<span class="var-name">Daytime tiredness</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Additional Factors (Confounders/Covariates) -->
+<div class="card additional-factors-card">
+<div class="card-header-with-badge">
+<h3 class="card-title">Additional Factors</h3>
+<span class="badge badge-control">Covariates</span>
+</div>
+<p class="card-description">
+            These variables may also influence the relationship between screen time and sleep, acting as potential moderating or confounding factors:
+          </p>
+<div class="additional-factors-chips">
+<span class="factor-chip">Age</span>
+<span class="factor-chip">Caffeine consumption</span>
+<span class="factor-chip">Exercise</span>
+<span class="factor-chip">Stress</span>
+<span class="factor-chip">Academic workload</span>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================
+         5. HYPOTHESES
+         ========================================================= -->
+<section class="section section-alt" id="hypotheses">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Tested Propositions</span>
+<h2 class="section-title">Research Hypotheses</h2>
+</div>
+<div class="hypotheses-grid">
+<!-- H1 -->
+<div class="card hypothesis-card">
+<div class="hypothesis-badge">H1</div>
+<div class="hypothesis-content">
+<span class="hypothesis-label">Hypothesis 1</span>
+<p class="hypothesis-statement">
+                Students with higher daily screen time will report lower sleep quality than students with lower daily screen time.
+              </p>
+</div>
+</div>
+<!-- H2 -->
+<div class="card hypothesis-card">
+<div class="hypothesis-badge">H2</div>
+<div class="hypothesis-content">
+<span class="hypothesis-label">Hypothesis 2</span>
+<p class="hypothesis-statement">
+                Students who spend more time using screens before bed will report shorter average sleep duration.
+              </p>
+</div>
+</div>
+<!-- H3 -->
+<div class="card hypothesis-card">
+<div class="hypothesis-badge">H3</div>
+<div class="hypothesis-content">
+<span class="hypothesis-label">Hypothesis 3</span>
+<p class="hypothesis-statement">
+                Students with greater nighttime screen use will report later average bedtimes.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================
+         6. DATASET
+         Information placeholder for Kaggle dataset integration
+         (No invented statistics or results)
+         ========================================================= -->
+<section class="section" id="dataset">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Empirical Data</span>
+<h2 class="section-title">Dataset</h2>
+</div>
+<!-- Kaggle Dataset Overview Placeholder -->
+<div class="card dataset-card">
+<div class="dataset-card-header">
+<div class="dataset-status-pill">Dataset Integrated</div>
+<span class="dataset-source-note">Kaggle Open Data</span>
+</div>
+<div class="dataset-metadata-grid">
+<div class="metadata-box">
+<span class="meta-box-label">Dataset Name</span>
+<span class="meta-box-value placeholder-value">Sleep, Screen Time and Stress Analysis</span>
+</div>
+<div class="metadata-box">
+<span class="meta-box-label">Kaggle Source</span>
+<span class="meta-box-value placeholder-value">Kaggle Open Dataset</span>
+</div>
+<div class="metadata-box">
+<span class="meta-box-label">Number of Records</span>
+<span class="meta-box-value placeholder-value">15,000</span>
+</div>
+<div class="metadata-box">
+<span class="meta-box-label">Number of Variables</span>
+<span class="meta-box-value placeholder-value">13</span>
+</div>
+</div>
+<div class="dataset-description-box">
+<h3 class="subsection-title">Dataset Description</h3>
+<p class="placeholder-text">
+<!-- DATASET INTEGRATION COMMENT:
+                   Once the Kaggle dataset is chosen, replace this placeholder paragraph with
+                   a summary describing the dataset's collection methodology, student demographic,
+                   sampling timeframe, and original authors. -->
+              The selected Kaggle dataset contains 15,000 records and 13 variables describing digital habits and health-related indicators. Participants range from ages 18 to 59. Key measures include daily screen time, phone use before sleep, sleep duration, sleep quality, stress level, caffeine intake, physical activity, daily notifications, and mental fatigue.
+            </p>
+</div>
+</div>
+<!-- Key Variables From Dataset -->
+<div class="card key-variables-card">
+<div class="card-header-with-badge">
+<h3 class="card-title">Key Variables From Dataset</h3>
+<span class="badge badge-neutral">Field Mapping</span>
+</div>
+<p class="card-description">
+<!-- DATASET INTEGRATION COMMENT:
+                 Update this section once dataset columns are identified. You can map dataset column
+                 names directly to our independent and dependent research variables. -->
+            This section will list and define the exact data fields extracted from the Kaggle dataset once chosen.
+          </p>
+<div class="key-variables-placeholder-grid">
+<div class="key-var-item">
+<span class="key-var-status">Dataset Field</span>
+<div class="key-var-name">daily_screen_time_hours</div>
+<div class="key-var-desc">Daily screen exposure measured in hours.</div>
+</div>
+<div class="key-var-item">
+<span class="key-var-status">Dataset Field</span>
+<div class="key-var-name">phone_usage_before_sleep_minutes</div>
+<div class="key-var-desc">Daily screen exposure measured in hours.</div>
+</div>
+<div class="key-var-item">
+<span class="key-var-status">Dataset Field</span>
+<div class="key-var-name">sleep_quality_score</div>
+<div class="key-var-desc">Reported sleep-quality score on a 1–10 scale.</div>
+</div>
+<div class="key-var-item">
+<span class="key-var-status">Dataset Field</span>
+<div class="key-var-name">sleep_duration_hours</div>
+<div class="key-var-desc">Daily screen exposure measured in hours.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================
+         7. ANALYSIS
+         Placeholder sections for future analysis and visual charts
+         (No invented statistics or results)
+         ========================================================= -->
+<section class="section section-alt" id="analysis"><div class="container"><div class="section-header"><span class="section-tag">Exploratory Data Analysis</span><h2 class="section-title">Exploratory Visualizations</h2></div><p class="section-intro">Nine exploratory charts are shown here, plus two SQL-based charts in the next section (11 total). The data is cross-sectional; no time series is available.</p><div class="analysis-grid"><div class="card analysis-card"><h3 class="analysis-title">Screen Time Distribution</h3><img class="analysis-chart" src="graphs/01_screen_time_distribution.png" alt="Screen Time Distribution"><p><strong>Observation:</strong> Daily screen time is centered near 5.50 hours.</p><p><strong>Interpretation:</strong> The dataset contains a range of digital-use habits.</p><p><strong>Research implication:</strong> Provides the exposure distribution for the primary research question.</p></div><div class="card analysis-card"><h3 class="analysis-title">Sleep Duration Distribution</h3><img class="analysis-chart" src="graphs/02_sleep_duration_distribution.png" alt="Sleep Duration Distribution"><p><strong>Observation:</strong> Average sleep duration is 6.51 hours.</p><p><strong>Interpretation:</strong> Sleep hours vary among respondents.</p><p><strong>Research implication:</strong> Establishes a baseline for evaluating sleep outcomes.</p></div><div class="card analysis-card"><h3 class="analysis-title">Screen Time vs Sleep Duration</h3><img class="analysis-chart" src="graphs/03_screen_vs_sleep.png" alt="Screen Time vs Sleep Duration"><p><strong>Observation:</strong> The Pearson correlation is approximately -0.002.</p><p><strong>Interpretation:</strong> No meaningful linear relationship appears in these records.</p><p><strong>Research implication:</strong> The hypothesis about screen time and sleep duration is not supported by this bivariate correlation.</p></div><div class="card analysis-card"><h3 class="analysis-title">Phone Use Before Sleep vs Quality</h3><img class="analysis-chart" src="graphs/04_bedtime_phone_vs_quality.png" alt="Phone Use Before Sleep vs Quality"><p><strong>Observation:</strong> Shows variation in quality across pre-sleep phone-use durations.</p><p><strong>Interpretation:</strong> The relationship requires attention to other factors.</p><p><strong>Research implication:</strong> Addresses the nighttime-phone-use research question.</p></div><div class="card analysis-card"><h3 class="analysis-title">Screen Time vs Sleep Quality</h3><img class="analysis-chart" src="graphs/05_screen_vs_quality.png" alt="Screen Time vs Sleep Quality"><p><strong>Observation:</strong> The Pearson correlation is approximately -0.747.</p><p><strong>Interpretation:</strong> Higher screen time is associated with lower sleep-quality scores.</p><p><strong>Research implication:</strong> Supports an association relevant to the main question, not a causal conclusion.</p></div><div class="card analysis-card"><h3 class="analysis-title">Screen Time by Gender</h3><img class="analysis-chart" src="graphs/06_gender_screen_box.png" alt="Screen Time by Gender"><p><strong>Observation:</strong> The distributions can be compared across reported genders.</p><p><strong>Interpretation:</strong> Any observed group differences require contextual interpretation.</p><p><strong>Research implication:</strong> Examines demographic variation in exposure.</p></div><div class="card analysis-card"><h3 class="analysis-title">Stress vs Mental Fatigue</h3><img class="analysis-chart" src="graphs/07_stress_vs_fatigue.png" alt="Stress vs Mental Fatigue"><p><strong>Observation:</strong> Displays the relationship between stress and mental fatigue.</p><p><strong>Interpretation:</strong> Stress may be relevant when interpreting screen and sleep associations.</p><p><strong>Research implication:</strong> Identifies a potential confounding factor.</p></div><div class="card analysis-card"><h3 class="analysis-title">Caffeine vs Sleep Duration</h3><img class="analysis-chart" src="graphs/08_caffeine_vs_sleep.png" alt="Caffeine vs Sleep Duration"><p><strong>Observation:</strong> Shows nightly sleep hours across caffeine consumption levels.</p><p><strong>Interpretation:</strong> Caffeine is another plausible sleep-related factor.</p><p><strong>Research implication:</strong> Supports discussion of study limitations.</p></div><div class="card analysis-card"><h3 class="analysis-title">Correlation Matrix</h3><img class="analysis-chart" src="graphs/09_correlations.png" alt="Correlation Matrix"><p><strong>Observation:</strong> Screen time and stress correlate at approximately 0.879.</p><p><strong>Interpretation:</strong> Strong pairwise correlations do not prove a causal pathway.</p><p><strong>Research implication:</strong> Highlights the need to consider confounding and multivariable analysis.</p></div></div></div></section>
+<!-- =========================================================
+         8. ABOUT
+         ========================================================= -->
+<section class="section" id="cleaning"><div class="container"><div class="section-header"><span class="section-tag">Assignment 3 · Verified</span><h2 class="section-title">Data Cleaning &amp; Preparation</h2></div><p class="section-intro">Source: 15,000 records and 13 original fields. Cleaning was conservative: no rows were removed, no missing values or duplicates were found, and no invalid values were flagged under the documented checks.</p><div class="assignment-grid"><div class="assignment-panel"><h3>01. Missing values</h3><p>All 13 columns checked with isna().sum(); 0 missing cells. No imputation required.</p></div><div class="assignment-panel"><h3>02. Duplicates</h3><p>All 15,000 records checked with duplicated(); 0 duplicate rows. No records removed.</p></div><div class="assignment-panel"><h3>03. Data types</h3><p>Numeric measures parsed as numbers; gender and occupation treated as text. No failed numeric conversions.</p></div><div class="assignment-panel"><h3>04. Inconsistent formats</h3><p>Column names normalized; categorical text trimmed and title-cased in the prepared dataset.</p></div><div class="assignment-panel"><h3>05. Invalid values</h3><p>Age, daily screen hours, sleep duration and sleep quality checked against plausible limits; 0 records flagged by these rules.</p></div><div class="assignment-panel"><h3>06. Outliers</h3><p>Extreme observations retained for inspection rather than deleted automatically; unusual does not necessarily mean erroneous.</p></div><div class="assignment-panel"><h3>07. Categorical values</h3><p>Gender and occupation standardized for consistent grouping; source categories retained.</p></div><div class="assignment-panel"><h3>08. Transformations</h3><p>Added screen-time groups: low ≤3h, moderate >3–6h, high >6h; added invalid-value flag. 15,000 rows retained.</p></div></div><p class="section-intro">Downloadable outputs: <a href="data/cleaning_report.txt">Cleaning report</a> · <a href="data/cleaned_dataset.csv">Prepared CSV</a>. Limitations: these plausibility checks are not proof that all source values are accurate.</p></div></section><section class="section" id="sql"><div class="container"><div class="section-header"><span class="section-tag">SQL Assignment · Executed</span><h2 class="section-title">Eight SQL Queries &amp; Results</h2></div><p class="section-intro">All eight queries were executed against a SQLite database built from the prepared CSV. Tables show the first five returned rows; complete outputs are available for download. The JOIN query joins a derived occupation lookup to the main table.</p><div class="assignment-grid"><div class="assignment-panel"><h3>Query 1: 01 Basic Selection</h3><pre style="white-space:pre-wrap;overflow-wrap:anywhere;overflow-x:auto"><code>SELECT user_id, daily_screen_time_hours, sleep_duration_hours, sleep_quality_score FROM sleep_data LIMIT 20;</code></pre><div style="overflow-x:auto"><table class="dataframe result-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>user_id</th>
+      <th>daily_screen_time_hours</th>
+      <th>sleep_duration_hours</th>
+      <th>sleep_quality_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>3.26</td>
+      <td>5.31</td>
+      <td>7.72</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>1.85</td>
+      <td>7.36</td>
+      <td>9.70</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>3.04</td>
+      <td>4.50</td>
+      <td>6.38</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>9.00</td>
+      <td>6.68</td>
+      <td>5.53</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>3.52</td>
+      <td>7.57</td>
+      <td>6.69</td>
+    </tr>
+  </tbody>
+</table></div><p><a href="data/01_basic_selection.csv">Download full query output</a></p></div><div class="assignment-panel"><h3>Query 2: 02 Filtering</h3><pre style="white-space:pre-wrap;overflow-wrap:anywhere;overflow-x:auto"><code>SELECT user_id, daily_screen_time_hours, sleep_quality_score FROM sleep_data WHERE daily_screen_time_hours &gt; 6 LIMIT 100;</code></pre><div style="overflow-x:auto"><table class="dataframe result-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>user_id</th>
+      <th>daily_screen_time_hours</th>
+      <th>sleep_quality_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>4</td>
+      <td>9.00</td>
+      <td>5.53</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>7.26</td>
+      <td>6.16</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>9.75</td>
+      <td>5.52</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>8.05</td>
+      <td>6.23</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>7.55</td>
+      <td>6.15</td>
+    </tr>
+  </tbody>
+</table></div><p><a href="data/02_filtering.csv">Download full query output</a></p></div><div class="assignment-panel"><h3>Query 3: 03 Multiple Conditions</h3><pre style="white-space:pre-wrap;overflow-wrap:anywhere;overflow-x:auto"><code>SELECT user_id, daily_screen_time_hours, sleep_duration_hours FROM sleep_data WHERE daily_screen_time_hours &gt; 6 AND sleep_duration_hours &lt; 7 LIMIT 100;</code></pre><div style="overflow-x:auto"><table class="dataframe result-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>user_id</th>
+      <th>daily_screen_time_hours</th>
+      <th>sleep_duration_hours</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>4</td>
+      <td>9.00</td>
+      <td>6.68</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>9.75</td>
+      <td>4.73</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>7.55</td>
+      <td>4.89</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>7.53</td>
+      <td>4.33</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>6.55</td>
+      <td>4.25</td>
+    </tr>
+  </tbody>
+</table></div><p><a href="data/03_multiple_conditions.csv">Download full query output</a></p></div><div class="assignment-panel"><h3>Query 4: 04 Sorting</h3><pre style="white-space:pre-wrap;overflow-wrap:anywhere;overflow-x:auto"><code>SELECT user_id, daily_screen_time_hours FROM sleep_data ORDER BY daily_screen_time_hours DESC LIMIT 20;</code></pre><div style="overflow-x:auto"><table class="dataframe result-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>user_id</th>
+      <th>daily_screen_time_hours</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>920</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <td>2328</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <td>10102</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <td>13996</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <td>14170</td>
+      <td>10.0</td>
+    </tr>
+  </tbody>
+</table></div><p><a href="data/04_sorting.csv">Download full query output</a></p></div><div class="assignment-panel"><h3>Query 5: 05 Aggregation</h3><pre style="white-space:pre-wrap;overflow-wrap:anywhere;overflow-x:auto"><code>SELECT COUNT(*) AS participants, ROUND(AVG(daily_screen_time_hours),2) AS avg_screen_time, ROUND(AVG(sleep_duration_hours),2) AS avg_sleep FROM sleep_data;</code></pre><div style="overflow-x:auto"><table class="dataframe result-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>participants</th>
+      <th>avg_screen_time</th>
+      <th>avg_sleep</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>15000</td>
+      <td>5.5</td>
+      <td>6.51</td>
+    </tr>
+  </tbody>
+</table></div><p><a href="data/05_aggregation.csv">Download full query output</a></p></div><div class="assignment-panel"><h3>Query 6: 06 Group Comparison</h3><pre style="white-space:pre-wrap;overflow-wrap:anywhere;overflow-x:auto"><code>SELECT screen_time_group, COUNT(*) AS participants, ROUND(AVG(sleep_quality_score),2) AS avg_sleep_quality, ROUND(AVG(sleep_duration_hours),2) AS avg_sleep_duration FROM sleep_data GROUP BY screen_time_group ORDER BY avg_sleep_quality;</code></pre><div style="overflow-x:auto"><table class="dataframe result-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>screen_time_group</th>
+      <th>participants</th>
+      <th>avg_sleep_quality</th>
+      <th>avg_sleep_duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>High (&gt;6h)</td>
+      <td>6615</td>
+      <td>5.00</td>
+      <td>6.51</td>
+    </tr>
+    <tr>
+      <td>Moderate (3-6h)</td>
+      <td>5037</td>
+      <td>6.74</td>
+      <td>6.50</td>
+    </tr>
+    <tr>
+      <td>Low (&lt;=3h)</td>
+      <td>3348</td>
+      <td>7.96</td>
+      <td>6.52</td>
+    </tr>
+  </tbody>
+</table></div><p><a href="data/06_group_comparison.csv">Download full query output</a></p></div><div class="assignment-panel"><h3>Query 7: 07 Having</h3><pre style="white-space:pre-wrap;overflow-wrap:anywhere;overflow-x:auto"><code>SELECT occupation, COUNT(*) AS participants, ROUND(AVG(daily_screen_time_hours),2) AS avg_screen_time FROM sleep_data GROUP BY occupation HAVING COUNT(*) &gt;= 30 ORDER BY avg_screen_time DESC;</code></pre><div style="overflow-x:auto"><table class="dataframe result-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>occupation</th>
+      <th>participants</th>
+      <th>avg_screen_time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Student</td>
+      <td>1861</td>
+      <td>5.63</td>
+    </tr>
+    <tr>
+      <td>Software Engineer</td>
+      <td>1917</td>
+      <td>5.55</td>
+    </tr>
+    <tr>
+      <td>Manager</td>
+      <td>1962</td>
+      <td>5.54</td>
+    </tr>
+    <tr>
+      <td>Doctor</td>
+      <td>1922</td>
+      <td>5.49</td>
+    </tr>
+    <tr>
+      <td>Teacher</td>
+      <td>1797</td>
+      <td>5.47</td>
+    </tr>
+  </tbody>
+</table></div><p><a href="data/07_having.csv">Download full query output</a></p></div><div class="assignment-panel"><h3>Query 8: 08 Join</h3><pre style="white-space:pre-wrap;overflow-wrap:anywhere;overflow-x:auto"><code>SELECT d.occupation, COUNT(*) AS participants, ROUND(AVG(d.sleep_quality_score),2) AS avg_sleep_quality FROM sleep_data d JOIN (SELECT DISTINCT occupation FROM sleep_data WHERE occupation IS NOT NULL) o ON d.occupation=o.occupation GROUP BY d.occupation ORDER BY participants DESC;</code></pre><div style="overflow-x:auto"><table class="dataframe result-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>occupation</th>
+      <th>participants</th>
+      <th>avg_sleep_quality</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Manager</td>
+      <td>1962</td>
+      <td>6.21</td>
+    </tr>
+    <tr>
+      <td>Doctor</td>
+      <td>1922</td>
+      <td>6.26</td>
+    </tr>
+    <tr>
+      <td>Software Engineer</td>
+      <td>1917</td>
+      <td>6.20</td>
+    </tr>
+    <tr>
+      <td>Freelancer</td>
+      <td>1891</td>
+      <td>6.28</td>
+    </tr>
+    <tr>
+      <td>Student</td>
+      <td>1861</td>
+      <td>6.11</td>
+    </tr>
+  </tbody>
+</table></div><p><a href="data/08_join.csv">Download full query output</a></p></div></div><p><a href="data/sql_queries.sql">Download all SQL queries</a> · <a href="data/research.db">Download SQLite database</a></p></div></section><section class="section section-alt" id="sql-charts"><div class="container"><div class="section-header"><h2 class="section-title">SQL-Based Visualizations</h2></div><div class="analysis-grid"><div class="card analysis-card"><h3>Average Sleep Quality by Screen-Time Group</h3><img class="analysis-chart" src="graphs/10_sql_screen_group_quality.png" alt="SQL group comparison"><p>Low: 7.96; Moderate: 6.74; High: 5.00 average sleep-quality score.</p></div><div class="card analysis-card"><h3>Average Screen Time by Occupation</h3><img class="analysis-chart" src="graphs/11_sql_occupation_screen.png" alt="SQL occupation averages"><p>Based on the SQL GROUP BY and HAVING query; occupation differences are descriptive and do not establish causation.</p></div></div></div></section><section class="section" id="findings"><div class="container"><div class="section-header"><h2 class="section-title">Five Research Findings</h2></div><div class="assignment-grid"><div class="assignment-panel"><h3>1. Screen time and sleep quality</h3><p>Daily screen time and sleep-quality scores show a strong negative correlation (r ≈ -0.747).</p></div><div class="assignment-panel"><h3>2. Screen time and sleep duration</h3><p>Daily screen time and sleep duration show virtually no linear correlation (r ≈ -0.002).</p></div><div class="assignment-panel"><h3>3. Differences by screen-time group</h3><p>Mean sleep quality is 7.96 for low use, 6.74 for moderate use, and 5.00 for high use.</p></div><div class="assignment-panel"><h3>4. Screen time and stress</h3><p>Daily screen time and stress level show a strong positive correlation (r ≈ 0.879).</p></div><div class="assignment-panel"><h3>5. Population limitation</h3><p>The source contains ages 18–59 and multiple occupations; it does not identify all respondents as college students.</p></div></div><p class="section-intro">These results describe associations in this dataset, not causal effects. Generalization to college students is limited because student enrollment was not measured.</p></div></section><section class="section" id="about">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Project Information</span>
+<h2 class="section-title">About This Project</h2>
+</div>
+<div class="card about-card">
+<div class="about-grid">
+<div class="about-info-col">
+<div class="about-meta-row">
+<span class="about-label">Student</span>
+<span class="about-value">Seth Edwards</span>
+</div>
+<div class="about-meta-row">
+<span class="about-label">Course</span>
+<span class="about-value">TECH 3745 01</span>
+</div>
+<div class="about-meta-row">
+<span class="about-label">Research Topic</span>
+<span class="about-value">The Relationship Between Screen Time and Sleep Quality Among Students</span>
+</div>
+</div>
+<div class="about-desc-col">
+<h3 class="about-col-title">Project Purpose &amp; Scope</h3>
+<p class="body-text">
+                This project investigates whether students’ technology habits are associated with differences in sleep duration and sleep quality using data analysis.
+              </p>
+<p class="body-text">
+                Through empirical analysis of student screen usage patterns across academic, leisure, and pre-bedtime contexts, this research aims to identify meaningful relationships that can inform healthy technology habits and support overall student health and academic success.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- =========================================================
+       FOOTER
+       ========================================================= -->
+<footer class="site-footer">
+<div class="container footer-content">
+<div class="footer-text">
+<p class="footer-title">The Relationship Between Screen Time and Sleep Quality Among Students</p>
+<p class="footer-sub">Seth Edwards • TECH 3745 01 • College Research Project</p>
+</div>
+<a aria-label="Back to top" class="back-to-top" href="#home">
+<span>Back to Top</span>
+<svg fill="none" height="14" viewbox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 12.6667V3.33334M8 3.33334L3.33333 8M8 3.33334L12.6667 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"></path>
+</svg>
+</a>
+</div>
+</footer>
+<script>const overlay=document.getElementById('navOverlay'),toggle=document.getElementById('menuToggle');function menu(open){overlay.classList.toggle('open',open);toggle.setAttribute('aria-expanded',String(open));overlay.setAttribute('aria-hidden',String(!open))}toggle.addEventListener('click',()=>menu(true));document.getElementById('closeMenu').addEventListener('click',()=>menu(false));document.querySelectorAll('.nav-link').forEach(a=>a.addEventListener('click',()=>menu(false)));overlay.addEventListener('click',e=>{if(e.target===overlay)menu(false)});</script>
+</body>
+</html>
