@@ -1,0 +1,51 @@
+{
+  "threshold": 6.25,
+  "split": "80/20, random_state=42",
+  "features": [
+    "age",
+    "gender",
+    "occupation",
+    "daily_screen_time_hours",
+    "phone_usage_before_sleep_minutes",
+    "sleep_duration_hours",
+    "stress_level",
+    "caffeine_intake_cups",
+    "physical_activity_minutes",
+    "notifications_received_per_day",
+    "mental_fatigue_score"
+  ],
+  "models": [
+    {
+      "model": "Linear Regression",
+      "task": "Regression",
+      "MAE": 0.629,
+      "R2": 0.781
+    },
+    {
+      "model": "Random Forest Regressor",
+      "task": "Regression",
+      "MAE": 0.608,
+      "R2": 0.797
+    },
+    {
+      "model": "Gradient Boosting Regressor",
+      "task": "Regression",
+      "MAE": 0.603,
+      "R2": 0.802
+    },
+    {
+      "model": "Logistic Regression",
+      "task": "Classification",
+      "Accuracy": 0.883,
+      "F1": 0.882,
+      "ROC_AUC": 0.953
+    },
+    {
+      "model": "Random Forest Classifier",
+      "task": "Classification",
+      "Accuracy": 0.878,
+      "F1": 0.877,
+      "ROC_AUC": 0.952
+    }
+  ]
+}
