@@ -4,3 +4,18 @@
 
 /* Assignment 6 and model comparisons */
 .compare-section{margin:42px 0 64px}.compare-section>h2{margin:12px 0 22px}.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}.compare-grid figure{margin:0;min-width:0}.compare-grid img,.compare-section .card>img{display:block;width:100%;height:auto;max-height:550px;object-fit:contain;background:#fff;border-radius:12px;padding:10px}.compare-grid figcaption{font-weight:700;margin-bottom:14px}.compare-section>.card{margin-top:16px}.mini-note{font-size:.9rem;opacity:.85}@media(max-width:850px){.compare-grid{grid-template-columns:1fr}}
+
+/* Refinement: calmer visual rhythm, clearer charts and fewer decorative distractions */
+:root{--paper:#f7f9fb;--line:#e5eaf0}
+.section{padding-top:58px;padding-bottom:58px}
+.page-lead{padding:48px 0 44px}
+.page-lead h1{margin-bottom:12px}
+.section-head{margin-bottom:24px}
+.card{box-shadow:0 2px 10px #182b3c06;border-radius:15px}
+.chart-card .chart-content h3{margin-top:0}
+.chart-card .chart-content{padding-bottom:8px}
+.chart-image{min-height:310px;padding:10px 14px 16px}
+.nav a{font-weight:650}
+.hero-meta{gap:22px}
+@media(min-width:900px){.chart-card{min-width:0}.chart-card .chart-image{min-height:340px}}
+@media(max-width:790px){.section{padding-top:42px;padding-bottom:42px}.chart-image{min-height:230px}.page-lead{padding:40px 0}}
