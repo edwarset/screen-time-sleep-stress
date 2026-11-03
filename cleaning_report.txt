@@ -1,0 +1,19 @@
+Original rows: 15000
+Missing values by column:
+user_id                             0
+age                                 0
+gender                              0
+occupation                          0
+daily_screen_time_hours             0
+phone_usage_before_sleep_minutes    0
+sleep_duration_hours                0
+sleep_quality_score                 0
+stress_level                        0
+caffeine_intake_cups                0
+physical_activity_minutes           0
+notifications_received_per_day      0
+mental_fatigue_score                0
+Duplicate rows: 0
+Rows after duplicate removal: 15000
+Rows flagged for invalid values: 0
+Numeric fields coerced to numeric; gender and occupation trimmed and title-cased. Outliers retained for investigation, not automatically removed.
